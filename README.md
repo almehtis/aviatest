@@ -1,6 +1,7 @@
 ## Used stack: `React`, `Redux Toolkit`, `redux-persist`, `React router`, `Postgres`, `js-cookie`.
 
 ## Before run this app locally:
+[Original repo with the task](https://github.com/KosyanMedia/test-tasks/tree/master/marketing) 
 
 - Open postgres on your machine: `psql -U postgres`.
 - If you have problems with localization, add this command: `psql \! chcp 1251`.
