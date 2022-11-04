@@ -32,6 +32,8 @@ All commands described above you can find in the `server/src/database/database.s
 https://user-images.githubusercontent.com/60067351/199887184-9f97f39b-afd2-475a-9c9f-f6a5679c2764.mp4
 
 >**Screenshots:**
+- Console if user was on the homepage earlier: 
+![Снимок экрана 2022-11-04 075122](https://user-images.githubusercontent.com/60067351/199890483-92b88940-6d5e-4abe-8850-10935e99d9a8.png)
 
 - Home page desktop
 ![home-desktop](https://user-images.githubusercontent.com/60067351/199887325-effc3c0c-deb1-4312-b8be-6d72c71bfaa6.jpeg)
