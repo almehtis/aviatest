@@ -1,0 +1,127 @@
+.second-step-container {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content;
+  row-gap: 15px;
+  justify-content: center;
+}
+
+.second-step-container__title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  grid-row-start: 1;
+}
+
+.second-step-container__title.active::before {
+  content: "2.";
+}
+
+.second-step-container__title.inactive::before {
+  content: url("../../../../../public/icons/done.svg");
+}
+
+.form.active {
+  display: grid;
+}
+
+.form.inactive {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.form__input {
+  border: none;
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  height: 50px;
+  width: 260px;
+}
+
+.send-email-button {
+  font-family: Shnobel;
+  position: relative;
+  place-self: center;
+  background-color: #ffffff;
+  color: #7f4156;
+  border: none;
+  font-size: 40px;
+  border-radius: 40px;
+  padding: 10px 20px 10px 20px;
+  transition: all 0.3s linear;
+}
+
+.send-email-button:disabled {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  opacity: 0.7;
+}
+
+.send-email-button--hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .second-step-container {
+    row-gap: 15px;
+    text-align: center;
+  }
+
+  .second-step-container__title.active::before {
+    position: relative;
+    top: 0px;
+    right: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 16px;
+  }
+
+  .form.active {
+    grid-template-rows: min-content;
+  }
+
+  .second-step-container__title.inactive::before {
+    position: relative;
+    top: 5px;
+    right: 20px;
+  }
+
+  .send-email-button {
+    top: -90px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .second-step-container__title.active::before {
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    font-family: Shnobel;
+    font-size: 44px;
+  }
+
+  .second-step-container__title.inactive::before {
+    position: absolute;
+    top: 2.5px;
+    left: -30px;
+  }
+
+  .send-email-button {
+    width: 80%;
+    align-self: flex-start;
+  }
+
+  .send-email-button:hover {
+    cursor: pointer;
+    background-color: #7f4156;
+    color: #ffffff;
+  }
+
+  .send-email-button:disabled {
+    pointer-events: none;
+  }
+}

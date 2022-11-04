@@ -1,0 +1,65 @@
+.title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.title > span:first-child {
+  text-decoration: line-through;
+  color: #7f4156;
+  font-size: 50px;
+}
+
+.title > span:nth-child(3) {
+  font-size: 50px;
+}
+
+.title > span:nth-child(5) {
+  font-size: 100px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .background {
+    background-image: url("../../../../public/final-back.png");
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .title {
+    position: relative;
+    margin: auto;
+    margin-top: 25%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .background {
+    background-image: url("../../../../public/final-back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .pants {
+    background: url("../../../../public/man-in-pants-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-rows: auto 1fr auto;
+    z-index: 20;
+  }
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    width: 25%;
+  }
+}

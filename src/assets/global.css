@@ -1,0 +1,12 @@
+@font-face {
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-family: Shnobel;
+  src: url('../../public/fonts/shnobel-regular.woff') format('woff');
+}
+
+body {
+  font-family: Shnobel;
+  font-size: 16px;
+}
