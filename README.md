@@ -1,4 +1,4 @@
-## Used stack: `React`, `Redux Toolkit`, `redux-persist`, `React router`, `Postgres`, `js-cookie`.
+## Used stack: `React`, `Redux Toolkit`, `redux-persist`, `React router`, `Postgres`, `js-cookie`, `Prettier`.
 
 ## Before run this app locally:
 [Original repo with the task](https://github.com/KosyanMedia/test-tasks/tree/master/marketing) 
