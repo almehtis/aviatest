@@ -25,10 +25,6 @@ export const SecondStep = memo(function SecondStep(props: {
   );
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    console.log(emailIsShared);
-  });
-
   const {
     formState: { isValid, dirtyFields },
     handleSubmit,
