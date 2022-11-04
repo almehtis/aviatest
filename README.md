@@ -19,7 +19,7 @@ All commands described above you can find in the `server/src/database/database.s
 
 ## Start the app and manage it locally.
 
-- Open terminal, `cd server` and `npm run server`. It will launch the local development server for backend.
+- Open terminal, `cd server` and `npm run dev`. It will launch the local development server for backend.
 - Open terminal in the root directory and type `npm start`. It will start the local development server for frontend.
 - After the home page success first loading it will be add coockies and some notes in your `LocalStorage` (for state storing). After that the frontend will make a request to the server for the new user creation `{id: 1, shared: false, email: null}`. You can see if the new user was created just by visiting `http://localhost:8080/visitor`. Now if you share link from the main page or send your email according changes will be visible on `http://localhost:8080/visitor`, for example, `{id: 1, shared: true, email: test@gmail.com}`. If didn't complete all steps and just closed the window with app after your return there will be no user created, but show an old one in your browser's console.
 - If all the steps are completed the app will redirect the visitor to the `/final` page. This page isn't accessible if the visitor didn't complete all steps on the homepage. From this page user can't go back, because as I thought this is what pages like this create for.
