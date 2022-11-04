@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+## Used stack: `React`, `Redux Toolkit`, `redux-persist`, `React router`, `Postgres`, `js-cookie`.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Before run this app locally:
 
-## Available Scripts
+- Open postgres on your machine: `psql -U postgres`.
+- If you have problems with localization, add this command: `psql \! chcp 1251`.
+- Then you should create a database (I called it `visitors`): `CREATE DATABASE visitors;`.
+- `\c visitors` or `\c "visitors"`
+- And create the table (I called it `visitor`) `CREATE TABLE visitor (
+  id INT,
+  share BOOLEAN,
+  email VARCHAR(254));`.
 
-In the project directory, you can run:
+All commands described above you can find in the `server/src/database/database.sql` file.
 
-### `npm start`
+- Note that you should edit `server/src/database.ts` too: paste your postgres username, password and database name you created earlier, I left some comments.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### That's it, now you are ready to start this app.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Start the app and manage it locally.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Open terminal, `cd server` and `npm run server`. It will launch the local development server for backend.
+- Open terminal in the root directory and type `npm start`. It will start the local development server for frontend.
+- After the home page success first loading it will be add coockies and some notes in your `LocalStorage` (for state storing). After that the frontend will make a request to the server for the new user creation `{id: 1, shared: false, email: null}`. You can see if the new user was created just by visiting `http://localhost:8080/visitor`. Now if you share link from the main page or send your email according changes will be visible on `http://localhost:8080/visitor`, for example, `{id: 1, shared: true, email: test@gmail.com}`. If didn't complete all steps and just closed the window with app after your return there will be no user created, but show an old one in your browser's console.
+- If all the steps are completed the app will redirect the visitor to the `/final` page. This page isn't accessible if the visitor didn't complete all steps on the homepage. From this page user can't go back, because as I thought this is what pages like this create for.
